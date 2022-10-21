@@ -1,6 +1,8 @@
-let a = height * width;
+// 변수 이름 잘 짓기 (명사)
 
-const cpyNm = '애플';
+let area = width * height;
 
-let tpHd = '제목없음';
-let result = `<h1>${tpHd}</h1>`;
+const companyName = "애플";
+
+let title = "제목없음";
+let result = `<h1>${title}</h1>`;

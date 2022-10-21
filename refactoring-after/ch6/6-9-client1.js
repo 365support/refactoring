@@ -1,6 +1,8 @@
-import { acquireReading, baseRate } from './6-9.js';
+// 여러 함수를 클래스로 묶기
+// 요새는 함수를 변환함수로 묶는 것 보다 클래스로 묶는 것을 더 선호한다
 
-const aReading = acquireReading();
+import { acquireReading } from "./6-9.js";
 
-const baseCharge = baseRate(aReading.month, aReading.year) * aReading.quantity;
-console.log(baseCharge);
+const reading = acquireReading();
+
+console.log(reading.baseCharge);

@@ -1,6 +1,8 @@
-import { getDefaultOwner } from './6-6.js';
+// 변수 캡슐화
+
+import { getDefaultOwner } from "./6-6.js";
 
 const owner = getDefaultOwner();
-owner.firstName = '엘리';
+owner.firstName = "엘리";
 console.log(owner);
 console.log(getDefaultOwner());
