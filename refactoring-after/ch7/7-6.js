@@ -1,4 +1,6 @@
-export class TrackingInformation {
+// 클래스 인라인하기
+
+export class Shipment {
   #shippingCompany;
   #trackingNumber;
   constructor(trackingNumber, shippingCompany) {
@@ -22,32 +24,15 @@ export class TrackingInformation {
     this.#trackingNumber = arg;
   }
 
-  get display() {
+  get trackingInfo() {
     return `${this.shippingCompany}: ${this.trackingNumber}`;
   }
 }
 
-export class Shipment {
-  #trackingInformation;
-  constructor(trackingInformation) {
-    this.#trackingInformation = trackingInformation;
-  }
-
-  get trackingInfo() {
-    return this.#trackingInformation.display;
-  }
-
-  get trackingInformation() {
-    return this.#trackingInformation;
-  }
-
-  set trackingInformation(trackingInformation) {
-    this.#trackingInformation = trackingInformation;
-  }
-}
-
-const shipment = new Shipment(new TrackingInformation(999, 'Maersk'));
+const shipment = new Shipment(999, "Maersk");
 console.log(shipment.trackingInfo);
 
-shipment.trackingInformation.shippingCompany = 'COSCO';
+shipment.shippingCompany = "COSCO";
 console.log(shipment.trackingInfo);
+
+// 단순히 정보를 감싸고 역할이 없고 별도로 처리하는 로직이 없다면 지나치게 세분화 해놓은게 아닌가? 고민해보기

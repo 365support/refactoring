@@ -1,3 +1,4 @@
+// 위임 숨기기
 class Person {
   #name;
   #department;
@@ -44,7 +45,7 @@ export class Department {
   }
 }
 
-const person = new Person('Tom', new Department('aManager', '999'));
+const person = new Person("Tom", new Department("aManager", "999"));
 console.log(person.name);
 console.log(person.department.manager);
 console.log(person.department.chargeCode);
