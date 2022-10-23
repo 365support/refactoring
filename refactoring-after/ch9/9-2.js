@@ -1,12 +1,15 @@
+// 필드 이름 바꾸기
+// 의도를 나타낼 수 있는 이름을 사용하자
+
 class Organization {
   constructor(data) {
     this._name = data.name;
     this._country = data.country;
   }
-  get name() {
+  get title() {
     return this._name;
   }
-  set name(value) {
+  set title(value) {
     this._name = value;
   }
   get country() {
@@ -17,6 +20,6 @@ class Organization {
   }
 }
 const organization = new Organization({
-  name: '드림코딩',
-  country: '대한민국',
+  name: "support",
+  country: "대한민국",
 });
