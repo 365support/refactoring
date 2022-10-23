@@ -1,5 +1,12 @@
 // 알고리즘 교체하기
+// 성능이 더 좋고 알아보기 쉽게 바꾸자
 
+function foundPerson(people) {
+  const candidates = ["Don", "John", "Kent"];
+  return people.find((p) => candidates.includes(p)) || "";
+}
+
+// X
 function foundPerson(people) {
   for (let i = 0; i < people.length; i++) {
     if (people[i] === "Don") {
